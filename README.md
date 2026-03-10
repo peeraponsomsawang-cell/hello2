@@ -1,6 +1,10 @@
-num = int(input("Input: "))
+income = float(input("Enter your income: "))
 
-if num % 2 == 0:
-    print("This is an even number.")
+if income <= 150000:
+    print("No need to pay tax")
+elif income <= 250000:
+    tax = income * 0.10
+    print("Your tax amount is", tax)
 else:
-    print("This is an odd number.")
+    tax = income * 0.15
+    print("Your tax amount is", tax)
