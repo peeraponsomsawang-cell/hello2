@@ -1,18 +1,11 @@
-total = 0
+odd_seq = []
 
-while True:
-    product = input("Enter product name (or 'done' to finish): ")
+for i in range(101):
+    if i % 2 != 0:
+        odd_seq.append(i)
 
-    if product == "done":
-        break
+sum_square = 0
+for num in odd_seq:
+    sum_square += num ** 2
 
-    price = float(input("Enter price: "))
-    total += price
-
-print("Total price:", total)
-
-paid = float(input("Enter amount paid: "))
-
-change = paid - total
-
-print("Change:", change)
+print(sum_square)
